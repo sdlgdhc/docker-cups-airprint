@@ -37,7 +37,7 @@ COPY airprint/ /opt/airprint/
 COPY healthcheck.sh /
 COPY start-cups.sh /root/
 COPY pt1700Filter /usr/lib/cups/filter/pt1700Filter
-RUN chmod +x /healthcheck.sh /root/start-cups.sh
+RUN chmod +x /healthcheck.sh /root/start-cups.sh /usr/lib/cups/filter/pt1700Filter
 HEALTHCHECK --interval=10s --timeout=3s CMD /healthcheck.sh
 
 ENV TZ="GMT" \
